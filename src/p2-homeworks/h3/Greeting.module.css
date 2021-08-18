@@ -1,0 +1,10 @@
+
+.button, .butfocus {
+    background-color: green;
+    margin:0 10px;
+    opacity: 0.5;
+    color:white;
+}
+.butfocus {
+    opacity: 1;
+}

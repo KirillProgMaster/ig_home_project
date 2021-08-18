@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    /*justify-content: space-between;*/
+
+    margin:10px;
+}
+.item {
+    flex:0 0 100px;
+}
+.button {
+    width: 100px;
+    background-color:darkgreen;
+    color:white;
+}
+.priorityButton {
+    width: 60px;
+    background-color:darkgreen;
+    color:white;
+    margin: 10px;
+}
+.high {
+    color:red;
+}
+.middle {
+    color:yellow;
+}
+.low {
+    color:green;
+}

@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://webshturman.github.io/ig_home_project",
+  "homepage": "https://webshturman.github.io/ig_home_project",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -11,6 +11,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/react-router": "^5.1.16",
     "@types/uuid": "^8.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

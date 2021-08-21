@@ -30,7 +30,6 @@ function Affairs(props: AffairsPropsType) {
 
     return (
         <div>
-        const
             {mappedAffairs}
 
             <button className={buttonClass1} onClick={setAll}>All</button>

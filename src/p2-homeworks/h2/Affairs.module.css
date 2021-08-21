@@ -12,11 +12,14 @@
     background-color:darkgreen;
     color:white;
 }
-.priorityButton {
+.priorityButton,.buttonActive {
     width: 60px;
     background-color:darkgreen;
     color:white;
     margin: 10px;
+}
+.buttonActive{
+    background:forestgreen;
 }
 .high {
     color:red;

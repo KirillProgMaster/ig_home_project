@@ -1,6 +1,12 @@
-.header{
+.header, .activeHeader{
     display: flex;
-
+    /*display: none;*/
+    /*transform: translate(0, -100%);*/
+    /*z-index:-1;*/
+}
+.activeHeader{
+    transform: translate(-100%, 0);
+    /*display: none;*/
 }
 .header a{
     color:greenyellow;

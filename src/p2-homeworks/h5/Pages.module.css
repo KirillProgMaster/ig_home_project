@@ -1,21 +1,33 @@
-.header, .activeHeader{
+.header{
     display: flex;
-    /*display: none;*/
-    /*transform: translate(0, -100%);*/
-    /*z-index:-1;*/
+
+}
+.nonActiveHeader, .activeHeader{
+    display: flex;
+    list-style: none;
+    min-height: 24px;
+    padding:0;
+    margin:10px 0;
+    /*flex: 0 0 auto;*/
 }
 .activeHeader{
-    transform: translate(-100%, 0);
-    /*display: none;*/
+    transition: all .4s;
+    /*transform: translateY(0);*/
+    transform: translateX(0);
 }
-.header a{
+.nonActiveHeader{
+    /*transform: translateY(-200%);*/
+    transform: translateX(-100%);
+    transition: all .7s;
+}
+.header li>a{
     color:greenyellow;
     font-size: 18px;
 }
 .headerItem{
-    padding: 5px 15px 5px 0;
+    margin: 0 15px 0 0;
 }
-
+/*-------------------------------------------------------------------------------------------------*/
 .errorPage{
     height: 100vh;
     display: flex;

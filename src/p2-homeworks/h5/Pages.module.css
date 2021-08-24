@@ -1,32 +1,53 @@
 .header{
     display: flex;
-
 }
 .nonActiveHeader, .activeHeader{
     display: flex;
     list-style: none;
-    min-height: 24px;
     padding:0;
     margin:10px 0;
-    /*flex: 0 0 auto;*/
+    position:relative;
 }
 .activeHeader{
     transition: all .4s;
-    /*transform: translateY(0);*/
     transform: translateX(0);
 }
 .nonActiveHeader{
-    /*transform: translateY(-200%);*/
     transform: translateX(-100%);
-    transition: all .7s;
+    transition: all .6s;
 }
-.header li>a{
-    color:greenyellow;
-    font-size: 18px;
-}
-.headerItem{
+.header li{
     margin: 0 15px 0 0;
 }
+.defaultLink {
+    color:forestgreen;
+    font-size: 18px;
+    text-decoration: none;
+}
+.activeLink {
+    color:greenyellow;
+}
+
+.defaultLink:hover{
+    color:greenyellow;
+}
+.arrow,.arrowRotate{
+    position: absolute;
+    right: -20px;
+    width: 20px;
+    height: 20px;
+    background: url('./img/arrow.png') no-repeat;
+}
+.arrow{
+    transform:rotate(180deg);
+    transition: all .5s;
+    top: 0;
+}
+.arrowRotate{
+    transition: all .5s;
+    top:5px;
+}
+
 /*-------------------------------------------------------------------------------------------------*/
 .errorPage{
     height: 100vh;
@@ -36,7 +57,7 @@
     flex-direction: column;
     color:black;
 }
-.fourOfour h1{
+.errorTitle h1{
     font-size: 200px;
     margin:0;
 }

@@ -1,0 +1,41 @@
+.select {
+    width: 100%;
+    background-color: #c5e1a5;
+    color: blue;
+    font-weight: 700;
+    font-size: 14px;
+    appearance: none;
+    border-radius: 3px;
+    padding: 2px 5px;
+    cursor: pointer;
+
+
+}
+.selectBlock{
+    margin: 5px 0;
+    position: relative;
+    overflow: hidden;
+    width: 90px;
+}
+.selectBlock:after{
+    content:"";
+    position: absolute;
+    top: 42%;
+    right: 5px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid blue;
+    cursor:pointer;
+    pointer-events:none;
+}
+
+.select:focus{
+    outline: none;
+    border:2px solid cornflowerblue;
+}
+
+.option:checked{
+    background-color: greenyellow;
+}

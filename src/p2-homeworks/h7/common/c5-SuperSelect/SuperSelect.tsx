@@ -1,4 +1,10 @@
 import React, {SelectHTMLAttributes, DetailedHTMLProps, ChangeEvent} from 'react'
+import s from './Select.module.css'
+import {faKeyboard} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faSortDown} from "@fortawesome/free-solid-svg-icons/faSortDown";
+
+
 
 type DefaultSelectPropsType = DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>
 
@@ -14,17 +20,24 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
         ...restProps
     }
 ) => {
-    const mappedOptions: any[] = options ? options.map((o, i) => <option value={o} key={i}>{o}</option>) : []; // map options with key
+    const mappedOptions: any[] = options ? options.map((o, i) => {
+        return (
+            <option value={o} key={i} className={s.option}>{o}</option>
+        )
+    }) : []; // map options with key
 
     const onChangeCallback = (e: ChangeEvent<HTMLSelectElement>) => {
-        // onChange, onChangeOption
+        onChange && onChange(e)
         onChangeOption && onChangeOption(e.currentTarget.value)
     }
 
     return (
-        <select onChange={onChangeCallback} {...restProps}>
-            {mappedOptions}
-        </select>
+        <div className={s.selectBlock}>
+            <select onChange={onChangeCallback} {...restProps} className={s.select}>
+                {mappedOptions}
+            </select>
+        </div>
+
     )
 }
 

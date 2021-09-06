@@ -1,0 +1,28 @@
+.radio{
+    appearance: none;
+}
+.label, .active{
+    position: relative;
+    padding:0 7px 0 10px;
+}
+.label:before{
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    background-color: white;
+}
+.active:before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    background-color: blue;
+}

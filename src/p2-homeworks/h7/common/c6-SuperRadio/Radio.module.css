@@ -7,13 +7,14 @@
 }
 .label:before{
     content: "";
-    width: 14px;
-    height: 14px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     position: absolute;
     top: 4px;
     left: 0;
-    background-color: white;
+    border: 2px solid white;
+
 }
 .active:before{
     content: "";
@@ -24,5 +25,5 @@
     position: absolute;
     top: 4px;
     left: 0;
-    background-color: blue;
+    background-color: aqua;
 }

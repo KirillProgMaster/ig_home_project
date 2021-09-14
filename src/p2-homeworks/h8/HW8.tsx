@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {checkAgeAC, homeWorkReducer, sortNameDownAC, sortNameUpAC} from './bll/homeWorkReducer'
+import {checkAgeAC, homeWorkReducer, sortAC} from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 import s from '../h4/common/c2-SuperButton/SuperButton.module.css'
 import t from './HW8.module.css'
@@ -24,13 +24,14 @@ function HW8() {
 
     // need to fix any
     const finalPeople = people.map((p: UserType) => (
-        <div key={p._id}>
-            {p.name} {p.age}
+        <div key={p._id} className={t.listItem}>
+            <span>{p.name}</span>
+            <span>{p.age}</span>
         </div>
     ))
 
-    const sortUp = () => setPeople(homeWorkReducer(initialPeople, sortNameUpAC()))
-    const sortDown = () => setPeople(homeWorkReducer(initialPeople, sortNameDownAC()))
+    const sortUp = () => setPeople(homeWorkReducer(initialPeople, sortAC('up')))
+    const sortDown = () => setPeople(homeWorkReducer(initialPeople, sortAC('down')))
     const checkAge = () => setPeople(homeWorkReducer(initialPeople, checkAgeAC(18)))
     return (
         <div>

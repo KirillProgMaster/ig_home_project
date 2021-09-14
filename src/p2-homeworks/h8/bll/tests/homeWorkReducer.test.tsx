@@ -1,5 +1,5 @@
 import React from 'react'
-import {checkAgeAC, homeWorkReducer, sortNameDownAC, sortNameUpAC} from '../homeWorkReducer'
+import {checkAgeAC, homeWorkReducer, sortAC} from '../homeWorkReducer'
 import {UserType} from "../../HW8";
 
 let initialState: Array<UserType> // need to fix any
@@ -16,14 +16,14 @@ beforeEach(() => {
 })
 
 test('sort name up', () => {
-    const newState = homeWorkReducer(initialState, sortNameUpAC())
+    const newState = homeWorkReducer(initialState, sortAC('up'))
 
     console.log(newState)
     expect(newState.length).toBe(initialState.length)
     expect(newState[0].name).toBe('Александр')
 })
 test('sort name down', () => {
-    const newState = homeWorkReducer(initialState, sortNameDownAC())
+    const newState = homeWorkReducer(initialState, sortAC('down'))
 
     console.log(newState)
     expect(newState.length).toBe(initialState.length)

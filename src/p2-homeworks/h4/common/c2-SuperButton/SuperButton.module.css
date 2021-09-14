@@ -1,15 +1,18 @@
 .default,.red{
     margin: 10px 0 0 0;
-    background-color: green;
+    background-color: darkgreen;
     color:white;
     cursor: pointer;
 }
 .default:disabled {
     opacity: 0.5;
 }
+.default:focus {
+    background-color: forestgreen;
+}
 .red {
     background: red;
 }
 .changeButton{
-    margin: 10px 0 0 10px;
+    margin-left: 10px;
 }

@@ -11,12 +11,14 @@
     width: 100px;
     background-color:darkgreen;
     color:white;
+    cursor: pointer;
 }
 .priorityButton,.buttonActive {
     width: 60px;
     background-color:darkgreen;
     color:white;
     margin: 10px;
+    cursor: pointer;
 }
 .buttonActive{
     background:forestgreen;

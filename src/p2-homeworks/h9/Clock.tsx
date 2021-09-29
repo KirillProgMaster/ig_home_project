@@ -26,11 +26,11 @@ function Clock() {
         setShow(false)
     }
 
-    const time = [date.getHours(),date.getMinutes(),date.getSeconds()]
-    const dateInfo = [date.getDate(),date.getMonth() + 1,date.getFullYear()]
+    const time = [date.getHours(), date.getMinutes(), date.getSeconds()]
+    const dateInfo = [date.getDate(), date.getMonth() + 1, date.getFullYear()]
 
     const getCurrentData = (dateTime: Array<number>) => {
-        return dateTime.map(value => value<10 ? `${"0" + value}` : value).join(':')
+        return dateTime.map(value => value < 10 ? `${"0" + value}` : value).join(':')
     }
 
     return (

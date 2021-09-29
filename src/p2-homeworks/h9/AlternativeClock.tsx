@@ -28,8 +28,8 @@ function AlternativeClock() {
         setShow(false)
     }
 
-    const stringDate = moment().format('DD:MM:YYYY')
-    const stringTime = moment().format('HH:mm:ss')
+    const stringDate = moment(date).format('DD:MM:YYYY')
+    const stringTime = moment(date).format('HH:mm:ss')
 
     return (
         <div>

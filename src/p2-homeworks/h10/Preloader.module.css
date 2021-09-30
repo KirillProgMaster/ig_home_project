@@ -1,0 +1,18 @@
+.preloader{
+    position: relative;
+    margin-left: 32px;
+}
+
+.preloader:after {
+    content: "";
+    background: url("E:\ig_home_project\Homework1\my-app\src\p1-main\m1-ui\u1-app\img\loader.gif");
+    opacity: .8;
+    top: 0;
+    left: -32px;
+    bottom: 0;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    border-radius: 10px;
+}

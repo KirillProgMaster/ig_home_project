@@ -9,9 +9,9 @@ function HW11() {
     const onChangeRange = (value:number) =>{
         return setValue1(value)
     }
-    // const onChangeDobleRange = (value:number) =>{
-    //     return setValue2(value)
-    // }
+    const onDoubleChangeRange = (value:number) =>{
+        return setValue2(value)
+    }
     return (
 
         <div>
@@ -32,6 +32,9 @@ function HW11() {
                 <span>{value1}</span>
                 <SuperDoubleRange
                     onChangeRange={onChangeRange}
+                    onDoubleChangeRange={onDoubleChangeRange}
+                    max={value2}
+                    min={value1}
                     // сделать так чтоб value1 и value2 изменялось
                 />
                 <span>{value2}</span>

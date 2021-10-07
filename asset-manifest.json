@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/ig_home_project/static/css/main.6d91318c.chunk.css",
-    "main.js": "/ig_home_project/static/js/main.aff0f43b.chunk.js",
-    "main.js.map": "/ig_home_project/static/js/main.aff0f43b.chunk.js.map",
+    "main.css": "/ig_home_project/static/css/main.a6a615f3.chunk.css",
+    "main.js": "/ig_home_project/static/js/main.a0d34a4d.chunk.js",
+    "main.js.map": "/ig_home_project/static/js/main.a0d34a4d.chunk.js.map",
     "runtime-main.js": "/ig_home_project/static/js/runtime-main.aac52079.js",
     "runtime-main.js.map": "/ig_home_project/static/js/runtime-main.aac52079.js.map",
-    "static/js/2.e0de042b.chunk.js": "/ig_home_project/static/js/2.e0de042b.chunk.js",
-    "static/js/2.e0de042b.chunk.js.map": "/ig_home_project/static/js/2.e0de042b.chunk.js.map",
+    "static/js/2.b76f9d3b.chunk.js": "/ig_home_project/static/js/2.b76f9d3b.chunk.js",
+    "static/js/2.b76f9d3b.chunk.js.map": "/ig_home_project/static/js/2.b76f9d3b.chunk.js.map",
     "index.html": "/ig_home_project/index.html",
-    "static/css/main.6d91318c.chunk.css.map": "/ig_home_project/static/css/main.6d91318c.chunk.css.map",
-    "static/js/2.e0de042b.chunk.js.LICENSE.txt": "/ig_home_project/static/js/2.e0de042b.chunk.js.LICENSE.txt",
+    "static/css/main.a6a615f3.chunk.css.map": "/ig_home_project/static/css/main.a6a615f3.chunk.css.map",
+    "static/js/2.b76f9d3b.chunk.js.LICENSE.txt": "/ig_home_project/static/js/2.b76f9d3b.chunk.js.LICENSE.txt",
     "static/media/Preloader.module.css": "/ig_home_project/static/media/loader.66532971.gif",
     "static/media/index.css": "/ig_home_project/static/media/wallpaperbetter.05567ac7.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.aac52079.js",
-    "static/js/2.e0de042b.chunk.js",
-    "static/css/main.6d91318c.chunk.css",
-    "static/js/main.aff0f43b.chunk.js"
+    "static/js/2.b76f9d3b.chunk.js",
+    "static/css/main.a6a615f3.chunk.css",
+    "static/js/main.a0d34a4d.chunk.js"
   ]
 }

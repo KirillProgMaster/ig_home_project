@@ -9,6 +9,7 @@ type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 type SuperRangePropsType = DefaultInputPropsType & { // и + ещё пропсы которых нет в стандартном инпуте
     onChangeRange?: (value: number) => void
     min:number
+    className?:string
 };
 
 const SuperRange: React.FC<SuperRangePropsType> = (
@@ -24,7 +25,6 @@ const SuperRange: React.FC<SuperRangePropsType> = (
         onChange && onChange(e) // сохраняем старую функциональность
 
         onChangeRange && onChangeRange(+e.currentTarget.value)
-        console.log(+e.currentTarget.value)
     }
 
     const finalRangeClassName = `${s.range} ${className ? className : ''}`

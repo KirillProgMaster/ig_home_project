@@ -1,9 +1,10 @@
 import React, {ChangeEvent} from 'react'
+import s from '../c7-SuperRange/SuperRange.module.css'
 
 type SuperDoubleRangePropsType = {
-    onChangeRange?: (value: number) => void
-    onDoubleChangeRange?: (value: number) => void
-    // onChangeDoubleRange?: (value: [number, number]) => void
+    onChangeRange: (value: number) => void
+    onDoubleChangeRange: (value: number) => void
+    onChangeDoubleRange?: (value: [number, number]) => void
     value?: [number, number]
     max:number
     min:number
@@ -17,25 +18,22 @@ export const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     }
 ) => {
     // сделать самому, можно подключать библиотеки
-    const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        // onChange && onChange(e) // сохраняем старую функциональность
 
-        onChangeRange && onChangeRange(+e.currentTarget.value)
-        console.log(+e.currentTarget.value)
+    const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
+        +e.currentTarget.value <= max && onChangeRange(+e.currentTarget.value)
     }
     const onDoubleChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        // onChange && onChange(e) // сохраняем старую функциональность
-
-        onDoubleChangeRange && onDoubleChangeRange(+e.currentTarget.value)
-        console.log(+e.currentTarget.value)
+        +e.currentTarget.value >= min && onDoubleChangeRange(+e.currentTarget.value)
     }
+    const doubleRangeClass = `${s.range} ${s.doubleInput}`
     return (
-        <>
+        <div className={s.doubleRangeBlock}>
+            <div className={s.backTone}></div>
             <input
                 type={'range'}
                 onChange={onChangeCallback}
                 value={min}
-                // className={finalRangeClassName}
+                className={doubleRangeClass}
 
                 /*{...restProps} */
             />
@@ -43,11 +41,10 @@ export const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
                 type={'range'}
                 onChange={onDoubleChangeCallback}
                 value={max}
-                // onChange={onChangeCallback}
-                // className={finalRangeClassName}
+                className={doubleRangeClass}
 
                 /*{...restProps} */
             />
-        </>
+        </div>
     )
 }

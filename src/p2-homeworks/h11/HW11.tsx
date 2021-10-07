@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import SuperRange from './common/c7-SuperRange/SuperRange'
 import {SuperDoubleRange} from "./common/c8-SuperDoubleRange/SuperDoubleRange";
+import s from './common/c7-SuperRange/SuperRange.module.css'
 
 
 function HW11() {
@@ -20,7 +21,7 @@ function HW11() {
 
             {/*should work (должно работать)*/}
             <div>
-                <span>{value1}</span>
+                <span className={s.startValue}>{value1}</span>
                 <SuperRange
                     onChangeRange={onChangeRange}
                     min={value1}
@@ -29,7 +30,7 @@ function HW11() {
             </div>
 
             <div>
-                <span>{value1}</span>
+                <span className={s.startValue}>{value1}</span>
                 <SuperDoubleRange
                     onChangeRange={onChangeRange}
                     onDoubleChangeRange={onDoubleChangeRange}

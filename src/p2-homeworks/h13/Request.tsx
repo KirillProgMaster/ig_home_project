@@ -1,10 +1,11 @@
 import React, {ChangeEvent, useState} from 'react';
-import {RequestAPI, ResponseType} from "./RequestAPI";
+import {RequestAPI} from "./RequestAPI";
 
 export const Request = () => {
 
     const [value, setValue] = useState<boolean>(false)
     const [text, setText]=useState<string>('')
+
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>)=> {
         setValue(e.currentTarget.checked)
     }
@@ -17,6 +18,7 @@ export const Request = () => {
             setText(error.response.data.errorText)
         }
     }
+
     return (
         <div>
             <input type="checkbox" onChange={onChangeHandler}/>
